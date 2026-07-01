@@ -78,6 +78,12 @@ CARDS_SYMBOLS.forEach((symbol) => {
 
     // EVENT AU CLICK
     CARD_CONTAINER.onclick = () => {
+        // EMPECHER DE SELECTIONNER UNE CARTE DEJA VISIBLE
+        if (CARD_FRONT.classList.contains(`face_up`)) {
+            return;
+        };
+
+        // EMPECHER DE SELECTIONNER PLUS DE 2 CARTES
         if (FACE_UP_CARDS.length >= 2)
             return;
 
